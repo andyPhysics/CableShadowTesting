@@ -40,14 +40,14 @@ tray.AddModule("I3MCEventHeaderGenerator","gen_header",
 
 tray.AddModule(generateEvent , "generateEvent",
                Type = dataclasses.I3Particle.ParticleType.MuMinus,
-               NEvents = 1,
+               NEvents = 10,
                XCoord = -256.14,
                YCoord = -521.08,
                ZCoord = 496.03,
                Primary_direction = dataclasses.I3Direction(0 , 0 ,-1),
                Daughter_direction = dataclasses.I3Direction(0 , 0 , -1),
                I3RandomService = randomService,
-               Energy = 10.0*I3Units.TeV )
+               Energy = 1.0*I3Units.TeV )
 
 photonSeriesName = "Photons"
 MCTreeName = "I3MCTree"

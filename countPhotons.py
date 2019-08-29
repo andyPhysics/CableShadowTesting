@@ -14,9 +14,15 @@ class ReturnPhotonSeries(icetray.I3ConditionalModule):
         self.photons = self.GetParameter("PhotonSeries")
 
     def Physics(self,frame):
-        self.count.append(len(frame[self.photons])) 
+        self.count.append(frame[self.photons]) 
         self.PushFrame(frame)
 
 def count_photons(x):
 # x is what is returned from self.count in ReturnPhotonSeries
-    return x
+    Number_of_photons_list = []
+    for j in x:
+        count = 0
+        for i in j.values():
+            count += len(i)
+        Number_of_photons_list.append(count)
+    return Number_of_photons_list

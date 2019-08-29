@@ -26,8 +26,5 @@ x1 = count_photons(x)
 
 x2 = count_photons(y)
 
-x3 = [i-j for i,j in zip(x1,x2)]
-
 print(x1)
 print(x2)
-print(x3)
